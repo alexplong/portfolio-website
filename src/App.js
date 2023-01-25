@@ -6,11 +6,37 @@ import About from "./framework/About";
 import Footer from "./framework/Footer";
 
 function App() {
+  const [siteProperties, setSiteProperties] = React.useState({
+    dark: false,
+    currentSelection: "hero",
+  });
+
+  function currentSelection(event) {
+    setSiteProperties((prevState) => ({
+      ...prevState,
+      currentSelection: event.target.id,
+    }));
+  }
+
   return (
     <div>
-      <Hero />
-      <Navigation />
-      <Footer />
+      <Navigation
+        dark={siteProperties.dark}
+        currentSelection={currentSelection}
+      />
+      {(() => {
+        switch (siteProperties.currentSelection) {
+          case "hero":
+            return <Hero dark={siteProperties.dark} />;
+          case "about":
+            return <About dark={siteProperties.dark} />;
+          default:
+            return null;
+        }
+      })()}
+
+      {/* <Hero dark={siteProperties.dark} /> */}
+      <Footer dark={siteProperties.dark} />
     </div>
   );
 }

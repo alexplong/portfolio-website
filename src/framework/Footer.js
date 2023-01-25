@@ -2,8 +2,12 @@
 
 import React from "react";
 
-function Header() {
-  return <div>Alex Plong</div>;
+function Footer() {
+  return (
+    <div className="navbar fixed-bottom d-flex justify-content-center">
+      Alex
+    </div>
+  );
 }
 
-export default Header;
+export default Footer;

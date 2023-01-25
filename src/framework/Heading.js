@@ -14,7 +14,7 @@ function Heading() {
         <h3 className="fs-5 fw-normal">Junior Software Engineer</h3>
       </div>
       <a href="#about" className="heading--link fs-6 fw-lighter">
-        <div className="heading--text">
+        <div className="heading--text text-dark">
           {" "}
           Read more <span>about me</span> or <span>contact me</span>
         </div>

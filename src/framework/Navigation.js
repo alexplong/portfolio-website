@@ -3,56 +3,98 @@
 import React from "react";
 import Button from "../components/Button";
 
-function Navigation() {
+function Navigation(props) {
   const [menuVisibility, setMenuVisibility] = React.useState(false);
 
   function toggleButton() {
     setMenuVisibility((prevState) => !prevState);
   }
 
-  console.log(menuVisibility);
-
   return (
-    <header className="nav--container">
-      <nav className="primary-navigation" data-visible={menuVisibility}>
-        <a class="nav-link fs-1 border-bottom" href="#home">
+    <header
+      className="nav--container 
+    m-1 d-flex align-items-center
+    justify-content-center container"
+    >
+      <nav className="primary-navigation row" data-visible={menuVisibility}>
+        <a
+          className="nav-link col-md-auto my-2 px-4"
+          id="hero"
+          href="#home"
+          onClick={(event) => {
+            props.currentSelection(event);
+            toggleButton();
+          }}
+        >
           {" "}
           Home{" "}
         </a>
 
-        <a class="nav-link fs-1  border-bottom" href="#blog">
+        <a
+          className="nav-link col-md-auto my-2 px-4"
+          id="blog"
+          href="#blog"
+          onClick={(event) => {
+            props.currentSelection(event);
+            toggleButton();
+          }}
+        >
           {" "}
           Blog{" "}
         </a>
 
-        <a class="nav-link fs-1  border-bottom" href="#about">
+        <a
+          className="nav-link col-md-auto my-2 px-4"
+          id="about"
+          href="#about"
+          onClick={(event) => {
+            props.currentSelection(event);
+            toggleButton();
+          }}
+        >
           {" "}
           About{" "}
         </a>
 
-        <a class="nav-link fs-1  border-bottom" href="#projects">
+        <a
+          className="nav-link col-md-auto my-2 px-4"
+          id="projects"
+          href="#projects"
+          onClick={(event) => {
+            props.currentSelection(event);
+            toggleButton();
+          }}
+        >
           {" "}
           Projects{" "}
         </a>
 
-        <a class="nav-link fs-1  border-bottom" href="#contact">
+        <a
+          className="nav-link col-md-auto my-2 px-4"
+          id="contact"
+          href="#contact"
+          onClick={(event) => {
+            props.currentSelection(event);
+            toggleButton();
+          }}
+        >
           {" "}
           Contact{" "}
         </a>
       </nav>
-      <div className="button-container">
+      <div className="button-container m-2 p-2 col-md-auto">
         <Button
-          classes="dark-toggle m-1 h-8 w-8 rounded p-1"
+          classes="dark-toggle px-1 rounded"
           ARIALabel="toggle dark mode"
           // HREF="#toggleDark"
-          icon="fa-solid fa-moon"
+          icon="fa-solid fa-moon fa-xl"
           toggleButton={toggleButton}
         />
         <Button
-          classes="menu-toggle m-1 h-8 w-8 rounded p-1"
+          classes="menu-toggle px-1 rounded d-md-none"
           ARIALabel="toggle menu"
           // HREF="#toggleDark"
-          icon="fa-solid fa-bars"
+          icon="fa-solid fa-bars fa-xl"
           toggleButton={toggleButton}
         />
       </div>
