@@ -1,0 +1,52 @@
+/* General */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-jc-fs {
+  justify-content: flex-start;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-as-c {
+  align-self: center;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  /* max-width: 80rem; */
+}

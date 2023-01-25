@@ -6,7 +6,7 @@ import Heading from "./Heading";
 
 function Hero() {
   return (
-    <div className="hero">
+    <div className="hero flex flex-col align-items-start flex-jc-c p-4 mx-2">
       <Canvas />
       <Heading />
     </div>
