@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "./framework/Hero";
 import Navigation from "./framework/Navigation";
 import About from "./framework/About";
+import Blog from "./framework/Blog";
 import Footer from "./framework/Footer";
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         switch (siteProperties.currentSelection) {
           case "hero":
             return <Hero dark={siteProperties.dark} />;
+          case "blog":
+            return <Blog dark={siteProperties.dark} />;
           case "about":
             return <About dark={siteProperties.dark} />;
           default:

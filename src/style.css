@@ -28,7 +28,7 @@ a:active {
 }
 
 .box {
-  border: 2px solid red;
+  border: 1px solid red;
 }
 
 .canvas {
@@ -107,6 +107,10 @@ a:active {
   .nav-link {
     font-size: calc(1.325rem + .9vw);
   }
+
+  .footer > i {
+    
+  }
 }
 
 /* Tablets */
@@ -123,7 +127,7 @@ a:active {
 /* Desktops */
 @media (min-width: 768px) {
   body {
-    background-color: cyan;
+    /* background-color: cyan; */
   }
 
   .nav--container {

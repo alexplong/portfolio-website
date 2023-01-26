@@ -84,10 +84,10 @@ function Navigation(props) {
       </nav>
       <div className="button-container m-2 p-2 col-md-auto">
         <Button
-          classes="dark-toggle px-1 rounded"
+          classes="dark-toggle px-1 py-1 rounded"
           ARIALabel="toggle dark mode"
           // HREF="#toggleDark"
-          icon="fa-solid fa-moon fa-xl"
+          icon="fa-solid fa-circle-half-stroke fa-xl"
           toggleButton={toggleButton}
         />
         <Button
