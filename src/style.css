@@ -21,69 +21,37 @@ a:active {
   /* --variable-name: property */
 }
 
-.hero {
-  height: 100vh;
-  position: relative;
-  border: 2px solid limegreen;
-}
-
-.box {
-  border: 1px solid red;
-}
-
-.canvas {
-  display: none;  
-  position: relative;
-  border: 2px solid red;
-
-}
-
-.heading {
-  position: absolute;
-  text-align: left;
-  gap: 1rem;
-}
-
-.heading--line_1 {
-
-}
-
-.heading--line_2 {
-
-}
-
-.heading--link {
-  /* border: 2px solid red; */
+body {
+  font-family: 'Roboto', 'sans-serif';
+  background: #FFFFFF;
 }
 
 .nav--container {
-
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
 .primary-navigation {
-  cursor: pointer !important;
+    cursor: pointer !important;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-left: 2.5em;
 }
 
 .button-container {
   position: fixed;
   top: 0;
-  right: 5px;
+  right: 0;
+  margin: 0.5em;
+  padding: 1em;
   z-index: 100;
-}
-
-.dark-toggle, .menu-toggle {
-  background-color: white;
-  color: black;
-  border: none;
-}
-
-.nav-link {
-
 }
 
 /* Mobile and Tablet*/
 @media (max-width: 767px) {
-.primary-navigation[data-visible="true"] {
+  .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
     transition: transform 250ms ease-in-out;
   }
@@ -95,26 +63,22 @@ a:active {
 
   .primary-navigation {
     position: fixed;
-    display: flex;
     flex-direction: column;
     inset: 0 0 0 5%;
     padding: 10rem 2em;
     background: hsl(0 0% 100%);
     z-index: 10;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
-  .nav-link {
-    font-size: calc(1.325rem + .9vw);
-  }
-
-  .footer > i {
-    
+  .nav-link > h2 {
+    font-size: calc(2rem + 1.125vw);
+    margin-bottom: 0.5em;
   }
 }
 
 /* Tablets */
-@media (min-width: 481px) and (max-width: 767px){
+@media (min-width: 481px) and (max-width: 767px) {
   body {
     /* background-color: #87ceeb; */
   }
@@ -124,27 +88,80 @@ a:active {
   }
 }
 
+
+
+.hero {
+  height: 100vh;
+  position: relative;
+  border: 2px solid limegreen;
+}
+
+.box {
+  border: 1px solid red;
+}
+
+.canvas {
+  display: none;
+  position: relative;
+  border: 2px solid red;
+
+}
+
+.heading {
+  position: absolute;
+  text-align: left;
+  gap: 1rem;
+}
+
+
+
+.dark-toggle,
+.menu-toggle {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+
+
+
+
+
+
+
 /* Desktops */
 @media (min-width: 768px) {
   body {
-    /* background-color: cyan; */
+    background-color: cyan;
+  }
+  
+  .nav--container {
+    /* position: fixed; */
+    /* top: 0;
+    right: 0;
+    z-index: 100; */
   }
 
-  .nav--container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
+  .button-container {
+    display: none;
   }
+
 
   .heading {
     margin-left: 4em;
-  }
-
-  .primary-navigation {
   }
 
   .nav-link {
     font-size: calc(1rem + .9vw);
   }
 }
+
+
+
+
+
+
+
+
+
+
