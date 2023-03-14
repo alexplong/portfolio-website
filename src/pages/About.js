@@ -1,14 +1,12 @@
 /** @format */
 
 import React from "react";
+import Footer from "../components/Footer";
 import Alex from "../assets/Alex.jpeg";
 
 function About() {
   return (
-    <section
-      className="about container d-flex flex-column align-items-center justify-content-center p-4 mt-5"
-      id="about"
-    >
+    <div className="about container" id="about">
       <img alt="Me" src={Alex} />
       <h2 className="mt-5">About</h2>
       <div className="container d-flex flex-column align-items-center mt-3">
@@ -33,7 +31,8 @@ function About() {
           <i className="fa-brands fa-r-project fa-2xl mx-3"></i>
         </div>
       </div>
-    </section>
+      <Footer />
+    </div>
   );
 }
 

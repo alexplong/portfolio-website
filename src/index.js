@@ -5,11 +5,14 @@ import "./style.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { SitePropsContextProvider } from "./trash/context/SitePropsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <SitePropsContextProvider>
+      <App />
+    </SitePropsContextProvider>
   </React.StrictMode>
 );
 
