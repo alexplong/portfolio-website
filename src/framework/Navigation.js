@@ -14,7 +14,7 @@ function Navigation(props) {
     <header
       className="nav--container 
     m-1 d-flex align-items-center
-    justify-content-center container"
+    justify-content-center container bg-white"
     >
       <nav className="primary-navigation row" data-visible={menuVisibility}>
         <a

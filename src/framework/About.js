@@ -6,7 +6,7 @@ import Alex from "../assets/Alex.jpeg";
 function About() {
   return (
     <section
-      className="about container d-flex flex-column align-items-center justify-content-center p-4 mt-5"
+      className="about container d-flex flex-column align-items-center justify-content-center p-4 mt-5 mb-5"
       id="about"
     >
       <img alt="Me" src={Alex} />
