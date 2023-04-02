@@ -1,37 +1,55 @@
 /** @format */
 
 import React from "react";
-import Footer from "../components/Footer";
 import Alex from "../assets/Alex.jpeg";
+import LabeledContainer from "../components/LabeledContainer";
+import FrontendSkillsContainer from "../components/FrontendSkillsContainer";
+import BackendSkillsContainer from "../components/BackendSkillsContainer";
+import OtherSkillsContainer from "../components/OtherSkillsContainer";
 
 function About() {
   return (
-    <div className="about container" id="about">
-      <img alt="Me" src={Alex} />
-      <h2 className="mt-5">About</h2>
-      <div className="container d-flex flex-column align-items-center mt-3">
+    <div
+      className="container flex flex-col justify-center items-center text-white"
+      id="about"
+    >
+      <h1 className="uppercase text-xl m-10">About me</h1>
+      <div className="rounded-full  w-9/12 aspect-square overflow-hidden m-6">
+        <img className="object-none" alt="Me" src={Alex} />
+      </div>
+      <div className="p-6">
         <p>
-          As a former research scientist turned software engineer, I am fully
-          committed to the philosophy of life-long learning. I am a full stack
-          developer with a background in JavaScript, React, and several coding
-          languages with experience developing mobile applications and building
-          websites.
+          I am a former research scientist turned software engineer, I am
+          dedicated to life-long learning mentality. I am a full stack developer
+          with a background in JavaScript, React, and several coding languages
+          with experience developing mobile applications and building websites.
           <br />
           <br />I am diligent and detail-oriented, with 9+ years of experience
           as a scientist in research laboratories.
         </p>
-        <h3 className="mt-5">Skills</h3>
-        <div className="mt-3">
-          <i className="fa-brands fa-square-js fa-2xl mx-3"></i>
-          <i className="fa-brands fa-html5 fa-2xl mx-3"></i>
-          <i className="fa-brands fa-css3-alt fa-2xl mx-3"></i>
-          <i className="fa-brands fa-node fa-2xl mx-3"></i>
-          <i className="fa-brands fa-react fa-2xl mx-3"></i>
-          <i className="fa-brands fa-python fa-2xl mx-3"></i>
-          <i className="fa-brands fa-r-project fa-2xl mx-3"></i>
+        <div>
+          <h3>Skills</h3>
+          <div className="flex flex-col md:flex-row justify-between">
+            <LabeledContainer
+              className=""
+              Class="left-10"
+              label="Front End Skills"
+            >
+              <FrontendSkillsContainer />
+            </LabeledContainer>
+            <LabeledContainer
+              className=""
+              Class="left-20"
+              label="Back End Skills"
+            >
+              <BackendSkillsContainer />
+            </LabeledContainer>
+            <LabeledContainer className="" Class="left-32" label="Other Skills">
+              <OtherSkillsContainer />
+            </LabeledContainer>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
