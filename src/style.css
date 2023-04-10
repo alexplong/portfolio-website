@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Style Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -19,38 +23,28 @@ a:active {
 /* Custom Properties */
 :root {
   /* --variable-name: property */
+  --color-neonblue: #2272FF;
+  --color-neonblack: #1D1D1D;
+  --color-neonwhite: #E6E6E6;
 }
 
 body {
   font-family: 'Roboto', 'sans-serif';
-  background: #FFFFFF;
+  font-size: 16px;
+  background-color: var(--color-neonblack)
 }
 
-.nav--container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 20px;
-}
 
-.primary-navigation {
-    cursor: pointer !important;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    margin-left: 2.5em;
-}
 
-.button-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 0.5em;
-  padding: 1em;
-  z-index: 100;
-}
+/* .canvas {
+  display: none;
+  position: relative;
+  border: 2px solid red;
+
+} */
 
 /* Mobile and Tablet*/
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
     transition: transform 250ms ease-in-out;
@@ -62,105 +56,33 @@ body {
   }
 
   .primary-navigation {
-    position: fixed;
-    flex-direction: column;
     inset: 0 0 0 5%;
     padding: 10rem 2em;
-    background: hsl(0 0% 100%);
-    z-index: 10;
-    gap: 0.5rem;
+    background: hsl(0, 0%, 6%, .8);
+    backdrop-filter: blur(5px);
+    background: var(--color-neonblack)
   }
+} */
 
-  .nav-link > h2 {
-    font-size: calc(2rem + 1.125vw);
-    margin-bottom: 0.5em;
-  }
+
+.primary-navigation {
+  width: clamp(50%, 700px, 90%);
+  height: min(50%, 300px);
+
+  padding: 0 2rem;
+  border-radius: 12px;
+}
+
+.about {
+  margin-bottom: 500px;
 }
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 767px) {
   body {
-    /* background-color: #87ceeb; */
-  }
-
-  .nav-link {
-    margin-left: 4em;
+    color: var(--color-neonwhite)
   }
 }
-
-
-
-.hero {
-  height: 100vh;
-  position: relative;
-  border: 2px solid limegreen;
-}
-
-.box {
-  border: 1px solid red;
-}
-
-.canvas {
-  display: none;
-  position: relative;
-  border: 2px solid red;
-
-}
-
-.heading {
-  position: absolute;
-  text-align: left;
-  gap: 1rem;
-}
-
-
-
-.dark-toggle,
-.menu-toggle {
-  background-color: white;
-  color: black;
-  border: none;
-}
-
-
-
-
-
-
-
-
-/* Desktops */
-@media (min-width: 768px) {
-  body {
-    background-color: cyan;
-  }
-  
-  .nav--container {
-    /* position: fixed; */
-    /* top: 0;
-    right: 0;
-    z-index: 100; */
-  }
-
-  .button-container {
-    display: none;
-  }
-
-
-  .heading {
-    margin-left: 4em;
-  }
-
-  .nav-link {
-    font-size: calc(1rem + .9vw);
-  }
-}
-
-
-
-
-
-
 
 
 

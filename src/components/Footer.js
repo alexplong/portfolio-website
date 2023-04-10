@@ -4,7 +4,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="flex justify-center gap-4 w-full bottom-0 m-auto mt-5 text-neon-blue/50 ">
       <div>
         <i className="fa-brands fa-github-alt fa-2xl"></i>
       </div>

@@ -4,16 +4,16 @@ import React from "react";
 
 function Heading() {
   return (
-    <div className="heading d-flex flex-column">
+    <div className="heading">
       <div className="heading--line_1">
-        <h2 className="h1">
+        <h1 className="h1">
           Hi there! I'm<span> Alex</span>.
-        </h2>
+        </h1>
       </div>
       <div className="heading--line_2">
-        <h3 className="fs-5 fw-normal">Junior Software Engineer</h3>
+        <h2 className="">Junior Software Engineer</h2>
       </div>
-      <a href="#about" className="heading--link fs-6 fw-lighter">
+      <a href="#about" className="heading--link">
         <div className="heading--text text-dark">
           {" "}
           Read more <span>about me</span> or <span>contact me</span>

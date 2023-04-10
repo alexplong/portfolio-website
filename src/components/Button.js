@@ -7,7 +7,7 @@ function Button(props) {
     <button
       type="button"
       className={`${props.classes} `}
-      aria-label={props.ARIALabel}
+      // aria-label={props.ARIALabel}
     >
       <a
         className={props.classes}

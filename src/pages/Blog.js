@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import Footer from "../components/Footer";
 
 function Blog() {
   return (
@@ -15,7 +14,6 @@ function Blog() {
         <i className="fa-solid fa-helmet-safety fa-7x mx-3"></i>
         <i className="fa-solid fa-screwdriver-wrench fa-7x mx-3 "></i>
       </div>
-      <Footer />
     </div>
   );
 }
